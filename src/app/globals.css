@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+body {
+  @apply bg-bg text-ink font-sans antialiased;
+  background-image:
+    radial-gradient(60rem 32rem at 85% -8%, rgba(32,184,121,0.14), transparent 70%),
+    radial-gradient(40rem 28rem at -10% 45%, rgba(32,184,121,0.07), transparent 70%);
+  background-attachment: fixed;
+}
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background-image: linear-gradient(to right, rgba(41,55,47,0.35) 1px, transparent 1px), linear-gradient(to bottom, rgba(41,55,47,0.35) 1px, transparent 1px);
+  background-size: 48px 48px;
+  -webkit-mask-image: radial-gradient(ellipse at 50% 0%, black 15%, transparent 70%);
+  mask-image: radial-gradient(ellipse at 50% 0%, black 15%, transparent 70%);
+}
+:focus-visible { outline: 2px solid #20B879; outline-offset: 3px; border-radius: 4px; }
+::selection { background: #20B879; color: #0B0F0D; }
+
+@layer components {
+  .lift { @apply transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-[0_14px_40px_-18px_rgba(32,184,121,0.5)]; }
+  .btn { @apply inline-flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition-colors; }
+  .btn-primary { @apply bg-accent text-bg shadow-[0_0_24px_-6px_rgba(32,184,121,0.7)] hover:bg-[#2fd28d]; }
+  .btn-ghost { @apply border border-line text-ink hover:border-accent hover:text-accent; }
+  .card { @apply rounded-xl border border-line bg-surface p-5; }
+  .tag { @apply rounded-md border border-line bg-elev px-2 py-0.5 font-mono text-xs text-muted; }
+  .field { @apply w-full rounded-lg border border-line bg-surface px-3 py-2.5 text-sm text-ink placeholder:text-muted/60 focus:border-accent; }
+}
+
+/* One page-load moment: hero lines settle in. Disabled for reduced motion. */
+@keyframes settle { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.settle { animation: settle .7s ease-out both; }
+.settle-2 { animation-delay: .12s; }
+.settle-3 { animation-delay: .24s; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .settle, .animate-float, .animate-glow { animation: none !important; }
+  * { transition-duration: 0.01ms !important; }
+}
