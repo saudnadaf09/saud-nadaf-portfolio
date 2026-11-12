@@ -1,484 +1,300 @@
-# Saud Nadaf — Cybersecurity & Technology Portfolio
 
-<p align="center">
-  <a href="https://saudnadaf-dev.onrender.com">
-    <img src="https://img.shields.io/badge/Portfolio-Live-10B981?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Portfolio">
-  </a>
-  <a href="https://github.com/saudnadaf09">
-    <img src="https://img.shields.io/badge/GitHub-saudnadaf09-181717?style=for-the-badge&logo=github" alt="GitHub">
-  </a>
-  <a href="https://www.linkedin.com/in/saud-nadaf-41b015343/">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn">
-  </a>
-</p>
+<div align="center">
 
-<p align="center">
-  <strong>A personal portfolio showcasing cybersecurity interests, technical projects, academic background, certifications, and professional journey.</strong>
-</p>
+# Saud Nadaf | Cybersecurity & Technology Portfolio
 
-<p align="center">
-  Built with Next.js, TypeScript, and Tailwind CSS.
-  <br>
-  Designed for recruiters, internship opportunities, collaborators, and the cybersecurity community.
-</p>
+A fast, accessible, data-driven personal portfolio for a CSE (Cybersecurity) student, built with Next.js, TypeScript and Tailwind CSS.
+
+![Next.js](https://img.shields.io/badge/Next.js-14-000000?logo=nextdotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?logo=tailwindcss&logoColor=white)
+![Deploy](https://img.shields.io/badge/Deploy-Render-46E3B7?logo=render&logoColor=black)
+![License](https://img.shields.io/badge/Code_license-MIT-20B879)
+
+**Live Website:** [https://saudnadaf-dev.onrender.com](https://saudnadaf-dev.onrender.com)
+
+</div>
 
 ---
 
-## 🌐 Live Website
+## Table of contents
 
-**Visit Portfolio:** https://saudnadaf-dev.onrender.com
+- [Overview](#overview)
+- [Features](#features)
+- [Tech stack](#tech-stack)
+- [Project structure](#project-structure)
+- [Getting started](#getting-started)
+- [Environment variables](#environment-variables)
+- [Updating the content](#updating-the-content)
+- [Contact form and security](#contact-form-and-security)
+- [Accessibility and SEO](#accessibility-and-seo)
+- [Deployment](#deployment)
+- [Pre-launch checklist](#pre-launch-checklist)
+- [Roadmap](#roadmap)
+- [License](#license)
+- [Author](#author)
 
-The portfolio brings together my technical background, cybersecurity interests, development projects, training, certifications, and professional contact information in one place.
+## Overview
 
----
+This site presents my profile, projects, training, certifications and security work in one place for recruiters, internship reviewers and the technical community.
 
-## 📌 About the Project
+Design goals:
 
-This repository contains the source code for my personal portfolio website.
+- **Credible:** Every public claim is backed by the resume, a repository, a certificate or a report.
+- **Fast and light:** Server components, no heavy animation library, optimized images.
+- **Easy to maintain:** All content lives in one typed data file, not inside page layouts.
+- **Accessible:** Semantic HTML, keyboard navigation and reduced-motion support.
 
-The website is designed to provide a clear and structured overview of my academic journey, technical interests, hands-on projects, and professional development as a Computer Science and Engineering student specializing in Cybersecurity.
+## Features
 
-Rather than presenting an exaggerated list of skills or achievements, the portfolio focuses on genuine work, verifiable projects, practical learning, and relevant technical experience.
+- Single-page homepage: Home, About, Expertise, Projects, Experience, Education, Certifications, Achievements & Research, Leadership and Contact.
+- Dedicated project pages at `/projects/[slug]` with status, features, stack, contribution and links. Unknown slugs show a helpful 404.
+- Project category filters that work with the keyboard and announce results to screen readers.
+- Dark, restrained design with an emerald accent. Subtle entrance and scroll animations that turn off when the visitor prefers reduced motion.
+- Downloadable resume.
+- Contact form with client and server validation, spam protection, rate limiting and server-side email delivery.
+- SEO basics: metadata, Open Graph, canonical URL, `sitemap.xml`, `robots.txt` and favicon.
+- Responsive layout from 320px phones to wide desktops.
 
-### Key Objectives
+## Tech stack
 
-- Present my professional profile and technical background.
-- Showcase cybersecurity and software development projects.
-- Highlight relevant certifications and technical training.
-- Provide access to project repositories and live demonstrations.
-- Make my resume accessible to recruiters.
-- Create a direct communication channel for professional opportunities.
-- Maintain a clean, responsive, and accessible user experience.
-
----
-
-## ✨ Features
-
-| Feature | Description |
-|---|---|
-| Personal Introduction | Professional profile and introduction |
-| About Section | Academic background and technical interests |
-| Skills & Expertise | Organized technical skills and cybersecurity domains |
-| Projects Showcase | Project descriptions, technologies, repositories, and demos |
-| Project Details | Dedicated pages for individual projects |
-| Experience & Training | Relevant technical training and professional activities |
-| Education | Academic qualifications and background |
-| Certifications | Technical certifications and credentials |
-| Achievements | Relevant achievements and research activities |
-| Leadership | Teamwork, coordination, and leadership contributions |
-| Resume Download | Downloadable PDF resume |
-| Contact Form | Direct communication through a contact interface |
-| Responsive Design | Optimized layouts for mobile, tablet, and desktop |
-| SEO Optimization | Metadata, sitemap, robots.txt, and Open Graph support |
-| Accessibility | Semantic structure and keyboard-friendly navigation |
-
----
-
-## 🛠️ Technology Stack
-
-| Category | Technology |
-|---|---|
+| Area | Technology |
+| --- | --- |
 | Framework | Next.js 14 (App Router) |
 | Language | TypeScript |
-| Styling | Tailwind CSS |
+| Styling | Tailwind CSS with design tokens |
 | Icons | Lucide |
-| Typography | Inter, Space Grotesk, JetBrains Mono |
-| UI Architecture | React Components |
-| Email Integration | Resend API |
-| Deployment | Render |
-| Version Control | Git & GitHub |
+| Fonts | Inter, Space Grotesk, JetBrains Mono (via `next/font`) |
+| Email | Resend API, called only from the server |
+| Hosting | Render (Vercel also works) |
 
-### Development Principles
-
-- Component-based architecture.
-- Type-safe content management.
-- Reusable UI components.
-- Server-side handling of sensitive operations.
-- Responsive-first design.
-- Performance-conscious implementation.
-- Maintainable and structured codebase.
-
----
-
-## 🗂️ Project Structure
+## Project structure
 
 ```text
 saud-nadaf-portfolio/
-│
 ├── public/
-│   ├── resume/
-│   │   └── Saud_Nadaf_Resume.pdf
-│   │
-│   ├── projects/
-│   │   └── Project images and screenshots
-│   │
-│   ├── certificates/
-│   │   └── Verified certificate files
-│   │
-│   ├── saud.jpg
-│   └── icon.svg
-│
+│   ├── resume/                 # Downloadable resume PDF
+│   ├── projects/               # Project images and illustrations
+│   ├── certificates/           # Certificate files (add when verified)
+│   ├── saud.jpg                # Hero portrait
+│   └── icon.svg                # Favicon
 ├── src/
 │   ├── app/
-│   │   ├── page.tsx
-│   │   ├── layout.tsx
-│   │   ├── globals.css
-│   │   ├── not-found.tsx
-│   │   ├── projects/
-│   │   │   └── [slug]/
-│   │   ├── api/
-│   │   │   └── contact/
+│   │   ├── page.tsx            # Homepage
+│   │   ├── layout.tsx          # Fonts, metadata, skip link
+│   │   ├── globals.css         # Theme, utilities, animations
+│   │   ├── not-found.tsx       # Custom 404
+│   │   ├── projects/[slug]/    # Project detail pages
+│   │   ├── api/contact/        # Contact endpoint (server only)
 │   │   ├── sitemap.ts
 │   │   └── robots.ts
-│   │
-│   ├── components/
-│   │   ├── Navbar
-│   │   ├── Section
-│   │   ├── Reveal
-│   │   ├── ProjectCard
-│   │   ├── ProjectsGrid
-│   │   └── ContactForm
-│   │
-│   └── data/
-│       └── index.ts
-│
-├── .env.example
-├── render.yaml
+│   ├── components/             # Navbar, Section, Reveal, ProjectCard, ProjectsGrid, ContactForm
+│   └── data/index.ts           # All site content
+├── .env.example                # Environment variable template
+├── render.yaml                 # Render blueprint
 ├── tailwind.config.ts
-├── package.json
-├── README.md
-└── LICENSE
+└── README.md
 ```
 
-*Note: This structure represents the intended project organization. Individual files and folders may vary with subsequent development.*
+## Getting started
 
----
-
-## 🚀 Getting Started
-
-You can run this project locally by following the steps below.
-
-### Prerequisites
-
-Make sure you have installed:
-
-- Node.js 18.18 or newer
-- npm
-- Git
-- A code editor such as Visual Studio Code
-
-### 1. Clone the Repository
+**Requirements:** Node.js 18.18 or newer and Git.
 
 ```bash
+# 1. Clone
 git clone https://github.com/saudnadaf09/saud-nadaf-portfolio.git
-```
 
-### 2. Navigate to the Project
-
-```bash
 cd saud-nadaf-portfolio
-```
 
-### 3. Install Dependencies
-
-```bash
+# 2. Install dependencies
 npm install
-```
 
-### 4. Configure Environment Variables
-
-Create a `.env.local` file in the project root.
-
-```bash
+# 3. Create your local environment file
 cp .env.example .env.local
-```
 
-On Windows:
+# Windows:
+copy .env.example .env.local
 
-```powershell
-Copy-Item .env.example .env.local
-```
-
-Configure the required environment variables as described below.
-
-### 5. Start Development Server
-
-```bash
+# 4. Start the development server
 npm run dev
 ```
 
-Open your browser:
+Open [http://localhost:3000](http://localhost:3000).
 
-```text
-http://localhost:3000
-```
+### Scripts
 
-### Available Commands
+| Command | What it does |
+| --- | --- |
+| `npm run dev` | Start the development server with hot reload |
+| `npm run build` | Create the production build and type-check |
+| `npm start` | Run the production build |
 
-| Command | Description |
-|---|---|
-| `npm run dev` | Start development server |
-| `npm run build` | Generate production build |
-| `npm start` | Start production server |
+Run `npm run build && npm start` before every deployment to catch errors early.
 
-Before deployment, verify the production build:
+## Environment variables
 
-```bash
-npm run build
-```
+Copy `.env.example` to `.env.local`. Never commit `.env.local`.
 
----
+| Variable | Required | Purpose |
+| --- | --- | --- |
+| `RESEND_API_KEY` | For contact form | Resend API key. Server only. |
+| `CONTACT_TO_EMAIL` | For contact form | Inbox that receives messages |
+| `CONTACT_FROM_EMAIL` | For contact form | Verified sender address in Resend |
+| `NEXT_PUBLIC_SITE_URL` | Recommended | Public site URL for sitemap, canonical and Open Graph links |
 
-## ⚙️ Environment Variables
+Without the Resend variables the site still works. The contact form shows a clear message asking visitors to email directly.
 
-The project supports environment-based configuration.
+> `NEXT_PUBLIC_SITE_URL` is read at build time. If you change it, redeploy.
 
-| Variable | Purpose |
-|---|---|
-| `NEXT_PUBLIC_SITE_URL` | Public website URL for SEO and canonical metadata |
-| `RESEND_API_KEY` | Server-side email delivery API key |
-| `CONTACT_TO_EMAIL` | Destination email address for contact submissions |
-| `CONTACT_FROM_EMAIL` | Verified sender email address |
+## Updating the content
 
-### Example Configuration
+Almost everything is edited in [`src/data/index.ts`](src/data/index.ts):
 
-```env
-NEXT_PUBLIC_SITE_URL=https://saudnadaf-dev.onrender.com
+| To change | Edit |
+| --- | --- |
+| Name, intro, links, availability | `profile` |
+| Skills | `skills` |
+| Projects | `projects` |
+| Experience and training | `experience` |
+| Education | `education` |
+| Certifications | `certifications` |
+| Achievements and research | `achievements` |
+| Leadership | `leadership` |
 
-RESEND_API_KEY=your_resend_api_key
+Adding a project:
 
-CONTACT_TO_EMAIL=your_email@example.com
+1. Add an entry to `projects` with a unique `slug`.
+2. Put the screenshot in `public/projects/` and set `image` and `imageAlt`.
+3. Add `repositoryUrl` and `demoUrl` only when the URLs are real. The buttons appear automatically.
+4. Set an honest `status` (`Concept`, `In Progress` or `Completed`) and describe only features that exist.
 
-CONTACT_FROM_EMAIL=your_verified_sender@example.com
-```
+Replace the resume by overwriting `public/resume/Saud_Nadaf_Resume.pdf`.
 
-**Important:**
+### Content accuracy policy
 
-- Never commit `.env.local` to GitHub.
-- Never expose API keys in client-side code.
-- Keep sensitive credentials in Render's environment settings.
-- Configure email-related variables only when using the Resend integration.
+- No invented metrics, skill percentages, bug counts or endorsements.
+- Training, internships, roles and selections are labelled separately.
+- A vulnerability report is described as *submitted*, never as accepted or fixed, unless confirmed.
+- Only a sanitized summary of any security assessment is published. No exploitable details.
 
----
+## Contact form and security
 
-## 🔧 Content Management
+The form posts to `src/app/api/contact/route.ts`.
 
-The portfolio uses a centralized content structure to make profile updates easier.
+- **Validation:** Name, email and message are checked in the browser and again on the server.
+- **Spam control:** Hidden honeypot field plus an in-memory rate limit (3 messages per IP per 10 minutes).
+- **Output safety:** User input is HTML-escaped before it is placed in the email.
+- **Secrets:** API keys are read only on the server and never sent to the browser.
+- **Errors:** Visitors see a clear message, never internal error details.
 
-Where applicable, update the relevant data in:
+The in-memory rate limit resets when the server restarts and is per instance. For stricter limits, use a shared store such as Upstash Redis.
 
-```text
-src/data/index.ts
-```
-
-| Content | Update |
-|---|---|
-| Personal Profile | Name, introduction, contact details, social links |
-| Skills | Technical skills and areas of interest |
-| Projects | Project descriptions, status, stack, links |
-| Education | Academic qualifications |
-| Experience | Relevant experience and training |
-| Certifications | Verified certifications |
-| Achievements | Relevant accomplishments |
-| Leadership | Team and coordination activities |
-
-### Adding a New Project
-
-1. Create a project entry with a unique slug.
-2. Add relevant screenshots to `public/projects/`.
-3. Include a concise project description.
-4. Mention the actual technologies used.
-5. Add GitHub and live demo links if available.
-6. Specify the correct project status.
-7. Describe your actual contribution.
-
-Project status should accurately reflect the development stage:
-
-- Concept
-- In Progress
-- Completed
-
----
-
-## 🔐 Contact Form & Security
-
-The portfolio includes a contact interface for professional communication.
-
-The contact API is organized under:
-
-```text
-src/app/api/contact/route.ts
-```
-
-The documented implementation includes:
-
-- Client-side and server-side input validation.
-- Honeypot-based spam protection.
-- Basic rate limiting.
-- Server-side email delivery using Resend.
-- Safe handling of user-submitted content.
-- Controlled error responses.
-- Protection of server-side API credentials.
-
-### Security Considerations
-
-The in-memory rate limiter is instance-dependent and resets when the server restarts.
-
-For production environments requiring stronger rate limiting, a shared storage solution such as Redis can be considered.
-
-The portfolio does not publish confidential assessment details, private information, or exploitable vulnerability information.
-
----
-
-## ♿ Accessibility & SEO
+## Accessibility and SEO
 
 ### Accessibility
 
-The website is designed with accessibility considerations, including:
-
-- Semantic HTML structure.
-- Proper heading hierarchy.
-- Keyboard navigation support.
-- Visible focus indicators.
-- Accessible form labels.
-- Screen-reader-friendly status messages.
-- Reduced-motion preferences.
+- Semantic landmarks and one `h1`.
+- Skip-to-content link and visible keyboard focus.
+- Labelled form fields with live status messages.
+- Mobile menu works with keyboard and closes with `Esc`.
+- Animations respect `prefers-reduced-motion`.
 
 ### SEO
 
-The project includes the following SEO capabilities:
+- Unique title and description per page.
+- Open Graph metadata and canonical URL.
+- Generated `sitemap.xml` and `robots.txt`.
 
-- Page metadata and descriptions.
-- Open Graph metadata.
-- Canonical URL support.
-- Dynamic sitemap generation.
-- Robots configuration.
-- Structured page organization.
+## Deployment
 
----
+### Render (recommended here)
 
-## 🚀 Deployment
+1. Push this repository to GitHub.
+2. In Render, choose **New > Web Service** and connect the repository. Alternatively choose **New > Blueprint**, which reads [`render.yaml`](render.yaml).
+3. Use these settings:
 
-The website is deployed using **Render**.
+   - **Build command:** `npm install && npm run build`
+   - **Start command:** `npm start`
+   - **Environment:** `NODE_VERSION=20`
 
-### Live Deployment
+4. Add the environment variables from the table above.
+5. Set `NEXT_PUBLIC_SITE_URL` to `https://saudnadaf-dev.onrender.com` and redeploy.
 
-**Production URL:**
+Free Render instances sleep when idle, so the first visit after a quiet period can take about 30 seconds.
 
-https://saudnadaf-dev.onrender.com
+### Vercel (alternative)
 
-### Deployment Configuration
+Import this repository on [vercel.com](https://vercel.com), add the same environment variables and deploy.
 
-| Setting | Value |
-|---|---|
-| Platform | Render |
-| Service Type | Web Service |
-| Runtime | Node.js |
-| Repository | GitHub |
-| Branch | `main` |
-| Build Command | `npm install && npm run build` |
-| Start Command | `npm start` |
-| Instance | Free |
+## Pre-launch checklist
 
-### Deployment Process
+- [ ] Every claim, date and title matches the resume or supporting documents
+- [ ] Project statuses and personal contributions are accurate
+- [ ] All GitHub, demo, LinkedIn and certificate links open correctly
+- [ ] Resume downloads and opens on desktop and mobile
+- [ ] Test contact message is received, and error states behave correctly
+- [ ] No secrets or sensitive assessment details in the repository
+- [ ] `npm run build` passes with no errors
+- [ ] Checked on mobile, tablet and desktop widths
+- [ ] Keyboard-only navigation works
+- [ ] Open Graph preview image added at `public/og.png` (optional)
 
-1. Push the latest code to GitHub.
-2. Connect the repository to Render.
-3. Select the Node.js runtime.
-4. Configure build and start commands.
-5. Add the required environment variables.
-6. Deploy the web service.
-7. Verify the production website.
+## Roadmap
 
-Render can automatically deploy new commits when automatic deployments are enabled.
+- [ ] Replace project illustrations with real screenshots
+- [ ] Add certificate links or a certificate viewer
+- [ ] Add Open Graph preview image
+- [ ] Add a short write-up for each major project
+- [ ] Publish a sanitized summary of the security assessment
 
-**Hosting Note:** Free Render web services can spin down after periods of inactivity. The first request after inactivity may take additional time.
+## License
 
----
+The source code is released under the [MIT License](LICENSE).
 
-## 📋 Pre-Launch & Maintenance Checklist
+Personal content is **not** covered by the MIT License and remains all rights reserved. This includes the portrait photo, resume, written copy, project descriptions, certificates and logos. If you reuse this project as a template, replace all personal content with your own.
 
-- [x] Portfolio deployed successfully.
-- [x] Public Render URL available.
-- [ ] Verify all project repository links.
-- [ ] Verify live project demonstrations.
-- [ ] Check resume download functionality.
-- [ ] Verify contact form email delivery.
-- [ ] Test mobile and tablet layouts.
-- [ ] Review SEO metadata and social previews.
-- [ ] Check keyboard navigation and accessibility.
-- [ ] Run a final production build.
-- [ ] Review public content for accuracy.
-- [ ] Keep certificates and resume updated.
-
----
-
-## 🗺️ Future Improvements
-
-The following improvements may be introduced as the portfolio evolves:
-
-- [ ] Dedicated project case studies.
-- [ ] Improved project screenshots and visual previews.
-- [ ] Verified certificate viewing and links.
-- [ ] Enhanced project filtering.
-- [ ] Additional performance optimizations.
-- [ ] Improved social sharing previews.
-- [ ] Further accessibility improvements.
-- [ ] Custom domain integration.
-
----
-
-## 📜 License
-
-This repository's source code is licensed under the MIT License.
-
-See the [LICENSE](LICENSE) file for details.
-
-**Personal Content Notice:**
-
-The MIT License applies to the source code only. Personal materials remain the property of their respective rights holders, including:
-
-- Personal photographs.
-- Resume and personal information.
-- Original written content.
-- Certificates and credentials.
-- Personal branding assets.
-
-Permission should be obtained before reusing personal materials.
-
----
-
-## 👨‍💻 Author
+## Author
 
 **Saud Nadaf**
 
-Computer Science & Engineering Student  
-Cybersecurity Specialization  
-Darbhanga College of Engineering, Bihar
+CSE (Cybersecurity) student, Darbhanga College of Engineering
 
-### Professional Interests
+- GitHub: [@saudnadaf09](https://github.com/saudnadaf09)
+- LinkedIn: [saud-nadaf](https://www.linkedin.com/in/saud-nadaf-41b015343/)
+- Email: [saudnadaf854325@gmail.com](mailto:saudnadaf854325@gmail.com)
+- Portfolio: [saudnadaf-dev.onrender.com](https://saudnadaf-dev.onrender.com)
 
-- Web & Application Security
-- Vulnerability Assessment and Penetration Testing (VAPT)
-- Network Security
-- Security Operations and Blue Team
-- Digital Forensics
-- Vulnerability Research
-- Security Automation
+## Changelog
 
-### Connect With Me
-
-| Platform | Link |
-|---|---|
-| Portfolio | [saudnadaf-dev.onrender.com](https://saudnadaf-dev.onrender.com) |
-| GitHub | [@saudnadaf09](https://github.com/saudnadaf09) |
-| LinkedIn | [Saud Nadaf](https://www.linkedin.com/in/saud-nadaf-41b015343/) |
-| Email | [Contact Me](mailto:saudnadaf854325@gmail.com) |
+- **1.1.0:** Portrait, project illustrations, animations, richer theme, Render configuration
+- **1.0.0:** Initial release
 
 ---
 
-<p align="center">
-  <strong>Built with purpose, continuous learning, and a focus on practical cybersecurity.</strong>
-  <br>
-  <sub>© 2026 Saud Nadaf. All rights reserved for personal content.</sub>
-</p>
+## MIT License
+
+MIT License
+
+Copyright (c) 2026 Saud Nadaf
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+The MIT License above covers the source code only. Personal content (portrait
+photo, resume, written copy, project descriptions, certificates and logos)
+remains all rights reserved by Saud Nadaf.
